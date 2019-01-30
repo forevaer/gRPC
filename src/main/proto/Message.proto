@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package com.godme.proto;
+option java_package = "com.godme.proto";
+option java_outer_classname = "Message";
+
+message Student{
+    int32 id = 1;
+    string name = 2;
+    string addr = 3;
+}
+
+message Request{
+    string param = 1;
+}
+message Response{
+    string value = 1;
+}
+service StudentService{
+    rpc searchStudent(Request) returns(Student){}
+}
