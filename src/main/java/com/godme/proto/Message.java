@@ -1816,10 +1816,16 @@ public final class Message {
       "\n\rMessage.proto\022\017com.godme.proto\"1\n\007Stud" +
       "ent\022\n\n\002id\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\022\014\n\004addr\030\003 " +
       "\001(\t\"\030\n\007Request\022\r\n\005param\030\001 \001(\t\"\031\n\010Respons" +
-      "e\022\r\n\005value\030\001 \001(\t2W\n\016StudentService\022E\n\rse" +
-      "archStudent\022\030.com.godme.proto.Request\032\030." +
-      "com.godme.proto.Student\"\000B\032\n\017com.godme.p" +
-      "rotoB\007Messageb\006proto3"
+      "e\022\r\n\005value\030\001 \001(\t2\265\002\n\016StudentService\022E\n\rs" +
+      "earchStudent\022\030.com.godme.proto.Request\032\030" +
+      ".com.godme.proto.Student\"\000\022D\n\naddStudent" +
+      "\022\030.com.godme.proto.Request\032\030.com.godme.p" +
+      "roto.Student\"\0000\001\022F\n\014countStudent\022\030.com.g" +
+      "odme.proto.Request\032\030.com.godme.proto.Req" +
+      "uest\"\000(\001\022N\n\022batchSearchStudent\022\030.com.god" +
+      "me.proto.Request\032\030.com.godme.proto.Stude" +
+      "nt\"\000(\0010\001B\032\n\017com.godme.protoB\007Messageb\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

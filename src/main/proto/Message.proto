@@ -18,4 +18,10 @@ message Response{
 }
 service StudentService{
     rpc searchStudent(Request) returns(Student){}
+
+    rpc addStudent(Request) returns(stream Student){}
+
+    rpc countStudent(stream Request) returns( Request){}
+
+    rpc batchSearchStudent(stream Request) returns (stream Student){}
 }

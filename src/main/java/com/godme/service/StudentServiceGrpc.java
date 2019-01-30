@@ -1,13 +1,18 @@
 package com.godme.service;
 
-import com.godme.proto.Message;
-
 import static io.grpc.MethodDescriptor.generateFullMethodName;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
 import static io.grpc.stub.ClientCalls.asyncUnaryCall;
 import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
 import static io.grpc.stub.ClientCalls.blockingUnaryCall;
 import static io.grpc.stub.ClientCalls.futureUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
@@ -22,36 +27,132 @@ public final class StudentServiceGrpc {
   public static final String SERVICE_NAME = "com.godme.proto.StudentService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<Message.Request,
-      Message.Student> getSearchStudentMethod;
+  private static volatile io.grpc.MethodDescriptor<com.godme.proto.Message.Request,
+      com.godme.proto.Message.Student> getSearchStudentMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "searchStudent",
-      requestType = Message.Request.class,
-      responseType = Message.Student.class,
+      requestType = com.godme.proto.Message.Request.class,
+      responseType = com.godme.proto.Message.Student.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<Message.Request,
-      Message.Student> getSearchStudentMethod() {
-    io.grpc.MethodDescriptor<Message.Request, Message.Student> getSearchStudentMethod;
+  public static io.grpc.MethodDescriptor<com.godme.proto.Message.Request,
+      com.godme.proto.Message.Student> getSearchStudentMethod() {
+    io.grpc.MethodDescriptor<com.godme.proto.Message.Request, com.godme.proto.Message.Student> getSearchStudentMethod;
     if ((getSearchStudentMethod = StudentServiceGrpc.getSearchStudentMethod) == null) {
       synchronized (StudentServiceGrpc.class) {
         if ((getSearchStudentMethod = StudentServiceGrpc.getSearchStudentMethod) == null) {
           StudentServiceGrpc.getSearchStudentMethod = getSearchStudentMethod = 
-              io.grpc.MethodDescriptor.<Message.Request, Message.Student>newBuilder()
+              io.grpc.MethodDescriptor.<com.godme.proto.Message.Request, com.godme.proto.Message.Student>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "com.godme.proto.StudentService", "searchStudent"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  Message.Request.getDefaultInstance()))
+                  com.godme.proto.Message.Request.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  Message.Student.getDefaultInstance()))
+                  com.godme.proto.Message.Student.getDefaultInstance()))
                   .setSchemaDescriptor(new StudentServiceMethodDescriptorSupplier("searchStudent"))
                   .build();
           }
         }
      }
      return getSearchStudentMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.godme.proto.Message.Request,
+      com.godme.proto.Message.Student> getAddStudentMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "addStudent",
+      requestType = com.godme.proto.Message.Request.class,
+      responseType = com.godme.proto.Message.Student.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<com.godme.proto.Message.Request,
+      com.godme.proto.Message.Student> getAddStudentMethod() {
+    io.grpc.MethodDescriptor<com.godme.proto.Message.Request, com.godme.proto.Message.Student> getAddStudentMethod;
+    if ((getAddStudentMethod = StudentServiceGrpc.getAddStudentMethod) == null) {
+      synchronized (StudentServiceGrpc.class) {
+        if ((getAddStudentMethod = StudentServiceGrpc.getAddStudentMethod) == null) {
+          StudentServiceGrpc.getAddStudentMethod = getAddStudentMethod = 
+              io.grpc.MethodDescriptor.<com.godme.proto.Message.Request, com.godme.proto.Message.Student>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(
+                  "com.godme.proto.StudentService", "addStudent"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.godme.proto.Message.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.godme.proto.Message.Student.getDefaultInstance()))
+                  .setSchemaDescriptor(new StudentServiceMethodDescriptorSupplier("addStudent"))
+                  .build();
+          }
+        }
+     }
+     return getAddStudentMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.godme.proto.Message.Request,
+      com.godme.proto.Message.Request> getCountStudentMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "countStudent",
+      requestType = com.godme.proto.Message.Request.class,
+      responseType = com.godme.proto.Message.Request.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
+  public static io.grpc.MethodDescriptor<com.godme.proto.Message.Request,
+      com.godme.proto.Message.Request> getCountStudentMethod() {
+    io.grpc.MethodDescriptor<com.godme.proto.Message.Request, com.godme.proto.Message.Request> getCountStudentMethod;
+    if ((getCountStudentMethod = StudentServiceGrpc.getCountStudentMethod) == null) {
+      synchronized (StudentServiceGrpc.class) {
+        if ((getCountStudentMethod = StudentServiceGrpc.getCountStudentMethod) == null) {
+          StudentServiceGrpc.getCountStudentMethod = getCountStudentMethod = 
+              io.grpc.MethodDescriptor.<com.godme.proto.Message.Request, com.godme.proto.Message.Request>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
+              .setFullMethodName(generateFullMethodName(
+                  "com.godme.proto.StudentService", "countStudent"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.godme.proto.Message.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.godme.proto.Message.Request.getDefaultInstance()))
+                  .setSchemaDescriptor(new StudentServiceMethodDescriptorSupplier("countStudent"))
+                  .build();
+          }
+        }
+     }
+     return getCountStudentMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.godme.proto.Message.Request,
+      com.godme.proto.Message.Student> getBatchSearchStudentMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "batchSearchStudent",
+      requestType = com.godme.proto.Message.Request.class,
+      responseType = com.godme.proto.Message.Student.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+  public static io.grpc.MethodDescriptor<com.godme.proto.Message.Request,
+      com.godme.proto.Message.Student> getBatchSearchStudentMethod() {
+    io.grpc.MethodDescriptor<com.godme.proto.Message.Request, com.godme.proto.Message.Student> getBatchSearchStudentMethod;
+    if ((getBatchSearchStudentMethod = StudentServiceGrpc.getBatchSearchStudentMethod) == null) {
+      synchronized (StudentServiceGrpc.class) {
+        if ((getBatchSearchStudentMethod = StudentServiceGrpc.getBatchSearchStudentMethod) == null) {
+          StudentServiceGrpc.getBatchSearchStudentMethod = getBatchSearchStudentMethod = 
+              io.grpc.MethodDescriptor.<com.godme.proto.Message.Request, com.godme.proto.Message.Student>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+              .setFullMethodName(generateFullMethodName(
+                  "com.godme.proto.StudentService", "batchSearchStudent"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.godme.proto.Message.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.godme.proto.Message.Student.getDefaultInstance()))
+                  .setSchemaDescriptor(new StudentServiceMethodDescriptorSupplier("batchSearchStudent"))
+                  .build();
+          }
+        }
+     }
+     return getBatchSearchStudentMethod;
   }
 
   /**
@@ -83,9 +184,30 @@ public final class StudentServiceGrpc {
 
     /**
      */
-    public void searchStudent(Message.Request request,
-                              io.grpc.stub.StreamObserver<Message.Student> responseObserver) {
+    public void searchStudent(com.godme.proto.Message.Request request,
+        io.grpc.stub.StreamObserver<com.godme.proto.Message.Student> responseObserver) {
       asyncUnimplementedUnaryCall(getSearchStudentMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void addStudent(com.godme.proto.Message.Request request,
+        io.grpc.stub.StreamObserver<com.godme.proto.Message.Student> responseObserver) {
+      asyncUnimplementedUnaryCall(getAddStudentMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public io.grpc.stub.StreamObserver<com.godme.proto.Message.Request> countStudent(
+        io.grpc.stub.StreamObserver<com.godme.proto.Message.Request> responseObserver) {
+      return asyncUnimplementedStreamingCall(getCountStudentMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public io.grpc.stub.StreamObserver<com.godme.proto.Message.Request> batchSearchStudent(
+        io.grpc.stub.StreamObserver<com.godme.proto.Message.Student> responseObserver) {
+      return asyncUnimplementedStreamingCall(getBatchSearchStudentMethod(), responseObserver);
     }
 
     @Override public final io.grpc.ServerServiceDefinition bindService() {
@@ -94,9 +216,30 @@ public final class StudentServiceGrpc {
             getSearchStudentMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                Message.Request,
-                Message.Student>(
+                com.godme.proto.Message.Request,
+                com.godme.proto.Message.Student>(
                   this, METHODID_SEARCH_STUDENT)))
+          .addMethod(
+            getAddStudentMethod(),
+            asyncServerStreamingCall(
+              new MethodHandlers<
+                com.godme.proto.Message.Request,
+                com.godme.proto.Message.Student>(
+                  this, METHODID_ADD_STUDENT)))
+          .addMethod(
+            getCountStudentMethod(),
+            asyncClientStreamingCall(
+              new MethodHandlers<
+                com.godme.proto.Message.Request,
+                com.godme.proto.Message.Request>(
+                  this, METHODID_COUNT_STUDENT)))
+          .addMethod(
+            getBatchSearchStudentMethod(),
+            asyncBidiStreamingCall(
+              new MethodHandlers<
+                com.godme.proto.Message.Request,
+                com.godme.proto.Message.Student>(
+                  this, METHODID_BATCH_SEARCH_STUDENT)))
           .build();
     }
   }
@@ -121,10 +264,34 @@ public final class StudentServiceGrpc {
 
     /**
      */
-    public void searchStudent(Message.Request request,
-                              io.grpc.stub.StreamObserver<Message.Student> responseObserver) {
+    public void searchStudent(com.godme.proto.Message.Request request,
+        io.grpc.stub.StreamObserver<com.godme.proto.Message.Student> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getSearchStudentMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void addStudent(com.godme.proto.Message.Request request,
+        io.grpc.stub.StreamObserver<com.godme.proto.Message.Student> responseObserver) {
+      asyncServerStreamingCall(
+          getChannel().newCall(getAddStudentMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public io.grpc.stub.StreamObserver<com.godme.proto.Message.Request> countStudent(
+        io.grpc.stub.StreamObserver<com.godme.proto.Message.Request> responseObserver) {
+      return asyncClientStreamingCall(
+          getChannel().newCall(getCountStudentMethod(), getCallOptions()), responseObserver);
+    }
+
+    /**
+     */
+    public io.grpc.stub.StreamObserver<com.godme.proto.Message.Request> batchSearchStudent(
+        io.grpc.stub.StreamObserver<com.godme.proto.Message.Student> responseObserver) {
+      return asyncBidiStreamingCall(
+          getChannel().newCall(getBatchSearchStudentMethod(), getCallOptions()), responseObserver);
     }
   }
 
@@ -148,9 +315,17 @@ public final class StudentServiceGrpc {
 
     /**
      */
-    public Message.Student searchStudent(Message.Request request) {
+    public com.godme.proto.Message.Student searchStudent(com.godme.proto.Message.Request request) {
       return blockingUnaryCall(
           getChannel(), getSearchStudentMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public java.util.Iterator<com.godme.proto.Message.Student> addStudent(
+        com.godme.proto.Message.Request request) {
+      return blockingServerStreamingCall(
+          getChannel(), getAddStudentMethod(), getCallOptions(), request);
     }
   }
 
@@ -174,14 +349,17 @@ public final class StudentServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<Message.Student> searchStudent(
-        Message.Request request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.godme.proto.Message.Student> searchStudent(
+        com.godme.proto.Message.Request request) {
       return futureUnaryCall(
           getChannel().newCall(getSearchStudentMethod(), getCallOptions()), request);
     }
   }
 
   private static final int METHODID_SEARCH_STUDENT = 0;
+  private static final int METHODID_ADD_STUDENT = 1;
+  private static final int METHODID_COUNT_STUDENT = 2;
+  private static final int METHODID_BATCH_SEARCH_STUDENT = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -201,8 +379,12 @@ public final class StudentServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_SEARCH_STUDENT:
-          serviceImpl.searchStudent((Message.Request) request,
-              (io.grpc.stub.StreamObserver<Message.Student>) responseObserver);
+          serviceImpl.searchStudent((com.godme.proto.Message.Request) request,
+              (io.grpc.stub.StreamObserver<com.godme.proto.Message.Student>) responseObserver);
+          break;
+        case METHODID_ADD_STUDENT:
+          serviceImpl.addStudent((com.godme.proto.Message.Request) request,
+              (io.grpc.stub.StreamObserver<com.godme.proto.Message.Student>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -214,6 +396,12 @@ public final class StudentServiceGrpc {
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_COUNT_STUDENT:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.countStudent(
+              (io.grpc.stub.StreamObserver<com.godme.proto.Message.Request>) responseObserver);
+        case METHODID_BATCH_SEARCH_STUDENT:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.batchSearchStudent(
+              (io.grpc.stub.StreamObserver<com.godme.proto.Message.Student>) responseObserver);
         default:
           throw new AssertionError();
       }
@@ -226,7 +414,7 @@ public final class StudentServiceGrpc {
 
     @Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return Message.getDescriptor();
+      return com.godme.proto.Message.getDescriptor();
     }
 
     @Override
@@ -266,6 +454,9 @@ public final class StudentServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new StudentServiceFileDescriptorSupplier())
               .addMethod(getSearchStudentMethod())
+              .addMethod(getAddStudentMethod())
+              .addMethod(getCountStudentMethod())
+              .addMethod(getBatchSearchStudentMethod())
               .build();
         }
       }
