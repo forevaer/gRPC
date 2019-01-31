@@ -1,6 +1,7 @@
 package com.godme.service;
 
 import com.godme.proto.Message;
+import com.godme.proto.StudentServiceGrpc;
 import io.grpc.stub.StreamObserver;
 
 public class StudentServiceHandler extends StudentServiceGrpc.StudentServiceImplBase{

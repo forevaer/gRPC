@@ -26,7 +26,7 @@ public final class Message {
     /**
      * <code>string name = 2;</code>
      */
-    String getName();
+    java.lang.String getName();
     /**
      * <code>string name = 2;</code>
      */
@@ -36,7 +36,7 @@ public final class Message {
     /**
      * <code>string addr = 3;</code>
      */
-    String getAddr();
+    java.lang.String getAddr();
     /**
      * <code>string addr = 3;</code>
      */
@@ -61,7 +61,7 @@ public final class Message {
       addr_ = "";
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -72,7 +72,7 @@ public final class Message {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new NullPointerException();
+        throw new java.lang.NullPointerException();
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
@@ -98,13 +98,13 @@ public final class Message {
               break;
             }
             case 18: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               name_ = s;
               break;
             }
             case 26: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               addr_ = s;
               break;
@@ -123,14 +123,14 @@ public final class Message {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return Message.internal_static_com_godme_proto_Student_descriptor;
+      return com.godme.proto.Message.internal_static_com_godme_proto_Student_descriptor;
     }
 
-    protected FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Message.internal_static_com_godme_proto_Student_fieldAccessorTable
+      return com.godme.proto.Message.internal_static_com_godme_proto_Student_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              Student.class, Builder.class);
+              com.godme.proto.Message.Student.class, com.godme.proto.Message.Student.Builder.class);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -143,18 +143,18 @@ public final class Message {
     }
 
     public static final int NAME_FIELD_NUMBER = 2;
-    private volatile Object name_;
+    private volatile java.lang.Object name_;
     /**
      * <code>string name = 2;</code>
      */
-    public String getName() {
-      Object ref = name_;
-      if (ref instanceof String) {
-        return (String) ref;
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         name_ = s;
         return s;
       }
@@ -164,11 +164,11 @@ public final class Message {
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
-      Object ref = name_;
-      if (ref instanceof String) {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         name_ = b;
         return b;
       } else {
@@ -177,18 +177,18 @@ public final class Message {
     }
 
     public static final int ADDR_FIELD_NUMBER = 3;
-    private volatile Object addr_;
+    private volatile java.lang.Object addr_;
     /**
      * <code>string addr = 3;</code>
      */
-    public String getAddr() {
-      Object ref = addr_;
-      if (ref instanceof String) {
-        return (String) ref;
+    public java.lang.String getAddr() {
+      java.lang.Object ref = addr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         addr_ = s;
         return s;
       }
@@ -198,11 +198,11 @@ public final class Message {
      */
     public com.google.protobuf.ByteString
         getAddrBytes() {
-      Object ref = addr_;
-      if (ref instanceof String) {
+      java.lang.Object ref = addr_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         addr_ = b;
         return b;
       } else {
@@ -254,15 +254,15 @@ public final class Message {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof Student)) {
+      if (!(obj instanceof com.godme.proto.Message.Student)) {
         return super.equals(obj);
       }
-      Student other = (Student) obj;
+      com.godme.proto.Message.Student other = (com.godme.proto.Message.Student) obj;
 
       boolean result = true;
       result = result && (getId()
@@ -275,7 +275,7 @@ public final class Message {
       return result;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -293,69 +293,69 @@ public final class Message {
       return hash;
     }
 
-    public static Student parseFrom(
+    public static com.godme.proto.Message.Student parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Student parseFrom(
+    public static com.godme.proto.Message.Student parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Student parseFrom(
+    public static com.godme.proto.Message.Student parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Student parseFrom(
+    public static com.godme.proto.Message.Student parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Student parseFrom(byte[] data)
+    public static com.godme.proto.Message.Student parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Student parseFrom(
+    public static com.godme.proto.Message.Student parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Student parseFrom(java.io.InputStream input)
+    public static com.godme.proto.Message.Student parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static Student parseFrom(
+    public static com.godme.proto.Message.Student parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static Student parseDelimitedFrom(java.io.InputStream input)
+    public static com.godme.proto.Message.Student parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static Student parseDelimitedFrom(
+    public static com.godme.proto.Message.Student parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static Student parseFrom(
+    public static com.godme.proto.Message.Student parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static Student parseFrom(
+    public static com.godme.proto.Message.Student parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -367,7 +367,7 @@ public final class Message {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(Student prototype) {
+    public static Builder newBuilder(com.godme.proto.Message.Student prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -375,9 +375,9 @@ public final class Message {
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -387,17 +387,17 @@ public final class Message {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.godme.proto.Student)
-        StudentOrBuilder {
+        com.godme.proto.Message.StudentOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return Message.internal_static_com_godme_proto_Student_descriptor;
+        return com.godme.proto.Message.internal_static_com_godme_proto_Student_descriptor;
       }
 
-      protected FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Message.internal_static_com_godme_proto_Student_fieldAccessorTable
+        return com.godme.proto.Message.internal_static_com_godme_proto_Student_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                Student.class, Builder.class);
+                com.godme.proto.Message.Student.class, com.godme.proto.Message.Student.Builder.class);
       }
 
       // Construct using com.godme.proto.Message.Student.newBuilder()
@@ -406,7 +406,7 @@ public final class Message {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -428,23 +428,23 @@ public final class Message {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Message.internal_static_com_godme_proto_Student_descriptor;
+        return com.godme.proto.Message.internal_static_com_godme_proto_Student_descriptor;
       }
 
-      public Student getDefaultInstanceForType() {
-        return Student.getDefaultInstance();
+      public com.godme.proto.Message.Student getDefaultInstanceForType() {
+        return com.godme.proto.Message.Student.getDefaultInstance();
       }
 
-      public Student build() {
-        Student result = buildPartial();
+      public com.godme.proto.Message.Student build() {
+        com.godme.proto.Message.Student result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public Student buildPartial() {
-        Student result = new Student(this);
+      public com.godme.proto.Message.Student buildPartial() {
+        com.godme.proto.Message.Student result = new com.godme.proto.Message.Student(this);
         result.id_ = id_;
         result.name_ = name_;
         result.addr_ = addr_;
@@ -457,7 +457,7 @@ public final class Message {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -470,25 +470,25 @@ public final class Message {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof Student) {
-          return mergeFrom((Student)other);
+        if (other instanceof com.godme.proto.Message.Student) {
+          return mergeFrom((com.godme.proto.Message.Student)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(Student other) {
-        if (other == Student.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.godme.proto.Message.Student other) {
+        if (other == com.godme.proto.Message.Student.getDefaultInstance()) return this;
         if (other.getId() != 0) {
           setId(other.getId());
         }
@@ -513,11 +513,11 @@ public final class Message {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        Student parsedMessage = null;
+        com.godme.proto.Message.Student parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (Student) e.getUnfinishedMessage();
+          parsedMessage = (com.godme.proto.Message.Student) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -553,20 +553,20 @@ public final class Message {
         return this;
       }
 
-      private Object name_ = "";
+      private java.lang.Object name_ = "";
       /**
        * <code>string name = 2;</code>
        */
-      public String getName() {
-        Object ref = name_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           name_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -574,11 +574,11 @@ public final class Message {
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
-        Object ref = name_;
+        java.lang.Object ref = name_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           name_ = b;
           return b;
         } else {
@@ -589,7 +589,7 @@ public final class Message {
        * <code>string name = 2;</code>
        */
       public Builder setName(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -622,20 +622,20 @@ public final class Message {
         return this;
       }
 
-      private Object addr_ = "";
+      private java.lang.Object addr_ = "";
       /**
        * <code>string addr = 3;</code>
        */
-      public String getAddr() {
-        Object ref = addr_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getAddr() {
+        java.lang.Object ref = addr_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           addr_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -643,11 +643,11 @@ public final class Message {
        */
       public com.google.protobuf.ByteString
           getAddrBytes() {
-        Object ref = addr_;
+        java.lang.Object ref = addr_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           addr_ = b;
           return b;
         } else {
@@ -658,7 +658,7 @@ public final class Message {
        * <code>string addr = 3;</code>
        */
       public Builder setAddr(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -705,12 +705,12 @@ public final class Message {
     }
 
     // @@protoc_insertion_point(class_scope:com.godme.proto.Student)
-    private static final Student DEFAULT_INSTANCE;
+    private static final com.godme.proto.Message.Student DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new Student();
+      DEFAULT_INSTANCE = new com.godme.proto.Message.Student();
     }
 
-    public static Student getDefaultInstance() {
+    public static com.godme.proto.Message.Student getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -728,12 +728,12 @@ public final class Message {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<Student> getParserForType() {
       return PARSER;
     }
 
-    public Student getDefaultInstanceForType() {
+    public com.godme.proto.Message.Student getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -746,7 +746,7 @@ public final class Message {
     /**
      * <code>string param = 1;</code>
      */
-    String getParam();
+    java.lang.String getParam();
     /**
      * <code>string param = 1;</code>
      */
@@ -769,7 +769,7 @@ public final class Message {
       param_ = "";
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -780,7 +780,7 @@ public final class Message {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new NullPointerException();
+        throw new java.lang.NullPointerException();
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
@@ -801,7 +801,7 @@ public final class Message {
               break;
             }
             case 10: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               param_ = s;
               break;
@@ -820,29 +820,29 @@ public final class Message {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return Message.internal_static_com_godme_proto_Request_descriptor;
+      return com.godme.proto.Message.internal_static_com_godme_proto_Request_descriptor;
     }
 
-    protected FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Message.internal_static_com_godme_proto_Request_fieldAccessorTable
+      return com.godme.proto.Message.internal_static_com_godme_proto_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              Request.class, Builder.class);
+              com.godme.proto.Message.Request.class, com.godme.proto.Message.Request.Builder.class);
     }
 
     public static final int PARAM_FIELD_NUMBER = 1;
-    private volatile Object param_;
+    private volatile java.lang.Object param_;
     /**
      * <code>string param = 1;</code>
      */
-    public String getParam() {
-      Object ref = param_;
-      if (ref instanceof String) {
-        return (String) ref;
+    public java.lang.String getParam() {
+      java.lang.Object ref = param_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         param_ = s;
         return s;
       }
@@ -852,11 +852,11 @@ public final class Message {
      */
     public com.google.protobuf.ByteString
         getParamBytes() {
-      Object ref = param_;
-      if (ref instanceof String) {
+      java.lang.Object ref = param_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         param_ = b;
         return b;
       } else {
@@ -895,15 +895,15 @@ public final class Message {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof Request)) {
+      if (!(obj instanceof com.godme.proto.Message.Request)) {
         return super.equals(obj);
       }
-      Request other = (Request) obj;
+      com.godme.proto.Message.Request other = (com.godme.proto.Message.Request) obj;
 
       boolean result = true;
       result = result && getParam()
@@ -912,7 +912,7 @@ public final class Message {
       return result;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -926,69 +926,69 @@ public final class Message {
       return hash;
     }
 
-    public static Request parseFrom(
+    public static com.godme.proto.Message.Request parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Request parseFrom(
+    public static com.godme.proto.Message.Request parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Request parseFrom(
+    public static com.godme.proto.Message.Request parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Request parseFrom(
+    public static com.godme.proto.Message.Request parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Request parseFrom(byte[] data)
+    public static com.godme.proto.Message.Request parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Request parseFrom(
+    public static com.godme.proto.Message.Request parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Request parseFrom(java.io.InputStream input)
+    public static com.godme.proto.Message.Request parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static Request parseFrom(
+    public static com.godme.proto.Message.Request parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static Request parseDelimitedFrom(java.io.InputStream input)
+    public static com.godme.proto.Message.Request parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static Request parseDelimitedFrom(
+    public static com.godme.proto.Message.Request parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static Request parseFrom(
+    public static com.godme.proto.Message.Request parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static Request parseFrom(
+    public static com.godme.proto.Message.Request parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1000,7 +1000,7 @@ public final class Message {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(Request prototype) {
+    public static Builder newBuilder(com.godme.proto.Message.Request prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -1008,9 +1008,9 @@ public final class Message {
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1020,17 +1020,17 @@ public final class Message {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.godme.proto.Request)
-        RequestOrBuilder {
+        com.godme.proto.Message.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return Message.internal_static_com_godme_proto_Request_descriptor;
+        return com.godme.proto.Message.internal_static_com_godme_proto_Request_descriptor;
       }
 
-      protected FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Message.internal_static_com_godme_proto_Request_fieldAccessorTable
+        return com.godme.proto.Message.internal_static_com_godme_proto_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                Request.class, Builder.class);
+                com.godme.proto.Message.Request.class, com.godme.proto.Message.Request.Builder.class);
       }
 
       // Construct using com.godme.proto.Message.Request.newBuilder()
@@ -1039,7 +1039,7 @@ public final class Message {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1057,23 +1057,23 @@ public final class Message {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Message.internal_static_com_godme_proto_Request_descriptor;
+        return com.godme.proto.Message.internal_static_com_godme_proto_Request_descriptor;
       }
 
-      public Request getDefaultInstanceForType() {
-        return Request.getDefaultInstance();
+      public com.godme.proto.Message.Request getDefaultInstanceForType() {
+        return com.godme.proto.Message.Request.getDefaultInstance();
       }
 
-      public Request build() {
-        Request result = buildPartial();
+      public com.godme.proto.Message.Request build() {
+        com.godme.proto.Message.Request result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public Request buildPartial() {
-        Request result = new Request(this);
+      public com.godme.proto.Message.Request buildPartial() {
+        com.godme.proto.Message.Request result = new com.godme.proto.Message.Request(this);
         result.param_ = param_;
         onBuilt();
         return result;
@@ -1084,7 +1084,7 @@ public final class Message {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -1097,25 +1097,25 @@ public final class Message {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof Request) {
-          return mergeFrom((Request)other);
+        if (other instanceof com.godme.proto.Message.Request) {
+          return mergeFrom((com.godme.proto.Message.Request)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(Request other) {
-        if (other == Request.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.godme.proto.Message.Request other) {
+        if (other == com.godme.proto.Message.Request.getDefaultInstance()) return this;
         if (!other.getParam().isEmpty()) {
           param_ = other.param_;
           onChanged();
@@ -1133,11 +1133,11 @@ public final class Message {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        Request parsedMessage = null;
+        com.godme.proto.Message.Request parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (Request) e.getUnfinishedMessage();
+          parsedMessage = (com.godme.proto.Message.Request) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1147,20 +1147,20 @@ public final class Message {
         return this;
       }
 
-      private Object param_ = "";
+      private java.lang.Object param_ = "";
       /**
        * <code>string param = 1;</code>
        */
-      public String getParam() {
-        Object ref = param_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getParam() {
+        java.lang.Object ref = param_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           param_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -1168,11 +1168,11 @@ public final class Message {
        */
       public com.google.protobuf.ByteString
           getParamBytes() {
-        Object ref = param_;
+        java.lang.Object ref = param_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           param_ = b;
           return b;
         } else {
@@ -1183,7 +1183,7 @@ public final class Message {
        * <code>string param = 1;</code>
        */
       public Builder setParam(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1230,12 +1230,12 @@ public final class Message {
     }
 
     // @@protoc_insertion_point(class_scope:com.godme.proto.Request)
-    private static final Request DEFAULT_INSTANCE;
+    private static final com.godme.proto.Message.Request DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new Request();
+      DEFAULT_INSTANCE = new com.godme.proto.Message.Request();
     }
 
-    public static Request getDefaultInstance() {
+    public static com.godme.proto.Message.Request getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1253,12 +1253,12 @@ public final class Message {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<Request> getParserForType() {
       return PARSER;
     }
 
-    public Request getDefaultInstanceForType() {
+    public com.godme.proto.Message.Request getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1271,7 +1271,7 @@ public final class Message {
     /**
      * <code>string value = 1;</code>
      */
-    String getValue();
+    java.lang.String getValue();
     /**
      * <code>string value = 1;</code>
      */
@@ -1294,7 +1294,7 @@ public final class Message {
       value_ = "";
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -1305,7 +1305,7 @@ public final class Message {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new NullPointerException();
+        throw new java.lang.NullPointerException();
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
@@ -1326,7 +1326,7 @@ public final class Message {
               break;
             }
             case 10: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               value_ = s;
               break;
@@ -1345,29 +1345,29 @@ public final class Message {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return Message.internal_static_com_godme_proto_Response_descriptor;
+      return com.godme.proto.Message.internal_static_com_godme_proto_Response_descriptor;
     }
 
-    protected FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Message.internal_static_com_godme_proto_Response_fieldAccessorTable
+      return com.godme.proto.Message.internal_static_com_godme_proto_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              Response.class, Builder.class);
+              com.godme.proto.Message.Response.class, com.godme.proto.Message.Response.Builder.class);
     }
 
     public static final int VALUE_FIELD_NUMBER = 1;
-    private volatile Object value_;
+    private volatile java.lang.Object value_;
     /**
      * <code>string value = 1;</code>
      */
-    public String getValue() {
-      Object ref = value_;
-      if (ref instanceof String) {
-        return (String) ref;
+    public java.lang.String getValue() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         value_ = s;
         return s;
       }
@@ -1377,11 +1377,11 @@ public final class Message {
      */
     public com.google.protobuf.ByteString
         getValueBytes() {
-      Object ref = value_;
-      if (ref instanceof String) {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         value_ = b;
         return b;
       } else {
@@ -1420,15 +1420,15 @@ public final class Message {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof Response)) {
+      if (!(obj instanceof com.godme.proto.Message.Response)) {
         return super.equals(obj);
       }
-      Response other = (Response) obj;
+      com.godme.proto.Message.Response other = (com.godme.proto.Message.Response) obj;
 
       boolean result = true;
       result = result && getValue()
@@ -1437,7 +1437,7 @@ public final class Message {
       return result;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -1451,69 +1451,69 @@ public final class Message {
       return hash;
     }
 
-    public static Response parseFrom(
+    public static com.godme.proto.Message.Response parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Response parseFrom(
+    public static com.godme.proto.Message.Response parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Response parseFrom(
+    public static com.godme.proto.Message.Response parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Response parseFrom(
+    public static com.godme.proto.Message.Response parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Response parseFrom(byte[] data)
+    public static com.godme.proto.Message.Response parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Response parseFrom(
+    public static com.godme.proto.Message.Response parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Response parseFrom(java.io.InputStream input)
+    public static com.godme.proto.Message.Response parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static Response parseFrom(
+    public static com.godme.proto.Message.Response parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static Response parseDelimitedFrom(java.io.InputStream input)
+    public static com.godme.proto.Message.Response parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static Response parseDelimitedFrom(
+    public static com.godme.proto.Message.Response parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static Response parseFrom(
+    public static com.godme.proto.Message.Response parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static Response parseFrom(
+    public static com.godme.proto.Message.Response parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1525,7 +1525,7 @@ public final class Message {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(Response prototype) {
+    public static Builder newBuilder(com.godme.proto.Message.Response prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -1533,9 +1533,9 @@ public final class Message {
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1545,17 +1545,17 @@ public final class Message {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.godme.proto.Response)
-        ResponseOrBuilder {
+        com.godme.proto.Message.ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return Message.internal_static_com_godme_proto_Response_descriptor;
+        return com.godme.proto.Message.internal_static_com_godme_proto_Response_descriptor;
       }
 
-      protected FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Message.internal_static_com_godme_proto_Response_fieldAccessorTable
+        return com.godme.proto.Message.internal_static_com_godme_proto_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                Response.class, Builder.class);
+                com.godme.proto.Message.Response.class, com.godme.proto.Message.Response.Builder.class);
       }
 
       // Construct using com.godme.proto.Message.Response.newBuilder()
@@ -1564,7 +1564,7 @@ public final class Message {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1582,23 +1582,23 @@ public final class Message {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Message.internal_static_com_godme_proto_Response_descriptor;
+        return com.godme.proto.Message.internal_static_com_godme_proto_Response_descriptor;
       }
 
-      public Response getDefaultInstanceForType() {
-        return Response.getDefaultInstance();
+      public com.godme.proto.Message.Response getDefaultInstanceForType() {
+        return com.godme.proto.Message.Response.getDefaultInstance();
       }
 
-      public Response build() {
-        Response result = buildPartial();
+      public com.godme.proto.Message.Response build() {
+        com.godme.proto.Message.Response result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public Response buildPartial() {
-        Response result = new Response(this);
+      public com.godme.proto.Message.Response buildPartial() {
+        com.godme.proto.Message.Response result = new com.godme.proto.Message.Response(this);
         result.value_ = value_;
         onBuilt();
         return result;
@@ -1609,7 +1609,7 @@ public final class Message {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -1622,25 +1622,25 @@ public final class Message {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof Response) {
-          return mergeFrom((Response)other);
+        if (other instanceof com.godme.proto.Message.Response) {
+          return mergeFrom((com.godme.proto.Message.Response)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(Response other) {
-        if (other == Response.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.godme.proto.Message.Response other) {
+        if (other == com.godme.proto.Message.Response.getDefaultInstance()) return this;
         if (!other.getValue().isEmpty()) {
           value_ = other.value_;
           onChanged();
@@ -1658,11 +1658,11 @@ public final class Message {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        Response parsedMessage = null;
+        com.godme.proto.Message.Response parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (Response) e.getUnfinishedMessage();
+          parsedMessage = (com.godme.proto.Message.Response) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1672,20 +1672,20 @@ public final class Message {
         return this;
       }
 
-      private Object value_ = "";
+      private java.lang.Object value_ = "";
       /**
        * <code>string value = 1;</code>
        */
-      public String getValue() {
-        Object ref = value_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getValue() {
+        java.lang.Object ref = value_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           value_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -1693,11 +1693,11 @@ public final class Message {
        */
       public com.google.protobuf.ByteString
           getValueBytes() {
-        Object ref = value_;
+        java.lang.Object ref = value_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           value_ = b;
           return b;
         } else {
@@ -1708,7 +1708,7 @@ public final class Message {
        * <code>string value = 1;</code>
        */
       public Builder setValue(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1755,12 +1755,12 @@ public final class Message {
     }
 
     // @@protoc_insertion_point(class_scope:com.godme.proto.Response)
-    private static final Response DEFAULT_INSTANCE;
+    private static final com.godme.proto.Message.Response DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new Response();
+      DEFAULT_INSTANCE = new com.godme.proto.Message.Response();
     }
 
-    public static Response getDefaultInstance() {
+    public static com.godme.proto.Message.Response getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1778,12 +1778,12 @@ public final class Message {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<Response> getParserForType() {
       return PARSER;
     }
 
-    public Response getDefaultInstanceForType() {
+    public com.godme.proto.Message.Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1812,7 +1812,7 @@ public final class Message {
   private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    String[] descriptorData = {
+    java.lang.String[] descriptorData = {
       "\n\rMessage.proto\022\017com.godme.proto\"1\n\007Stud" +
       "ent\022\n\n\002id\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\022\014\n\004addr\030\003 " +
       "\001(\t\"\030\n\007Request\022\r\n\005param\030\001 \001(\t\"\031\n\010Respons" +
@@ -1844,19 +1844,19 @@ public final class Message {
     internal_static_com_godme_proto_Student_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_godme_proto_Student_descriptor,
-        new String[] { "Id", "Name", "Addr", });
+        new java.lang.String[] { "Id", "Name", "Addr", });
     internal_static_com_godme_proto_Request_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_com_godme_proto_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_godme_proto_Request_descriptor,
-        new String[] { "Param", });
+        new java.lang.String[] { "Param", });
     internal_static_com_godme_proto_Response_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_com_godme_proto_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_godme_proto_Response_descriptor,
-        new String[] { "Value", });
+        new java.lang.String[] { "Value", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

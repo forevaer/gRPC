@@ -1,7 +1,7 @@
 package com.godme.client;
 
 import com.godme.proto.Message;
-import com.godme.service.StudentServiceGrpc;
+import com.godme.proto.StudentServiceGrpc;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import io.grpc.stub.StreamObserver;
